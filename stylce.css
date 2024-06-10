@@ -1,43 +1,49 @@
 html, body {
     scroll-behavior: smooth;
-    background-color: rgb(31,29,30,255)
+    background-color: rgb(31,29,30,255);
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
 }
 
-.header {
-    display: flex;
-    padding: 20px 0px 20px 0px;
-    background-color: rgb(31,29,30,255)
-}
-
-.logo {
-    margin-left: 0;
-    width: 60px;
-}
-
+/* General Container */
 .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    width: 100%;
+    background-color: rgba(31,29,30,0.8);
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 90px;
 }
 
 .nav-list {
     display: flex;
-    gap: 25px;
+    justify-content: space-around;
+    flex-grow: 1;
 }
 
 .nav-item a {
     text-decoration: none;
-    color: #ffffff; /* Color de las letras de las secciones */
+    color: #ffffff;
+    padding: 10px;
+    transition: color 0.3s;
 }
 
-.black-bg {
-    background-color: #000;
-    color: #000;
-    border-radius: 20px;
-    padding: 10px 20px;
-}
-
-/* Estilos para el fondo naranja del botón de Registrarse */
 .orange-bg {
     background-color: #ff8800;
     color: #fff;
@@ -47,86 +53,56 @@ html, body {
 ul{
     list-style: none;
 }
-
-#home {
-    height: 90vh;
-    background-image: url('https://github.com/LuceroObispoRios/Grupo1_WS52/blob/main/Proyecto/image/fondo.jpeg?raw=true');
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    overflow: hidden;
+.nav-item a:hover {
+    color: #ff8800;
 }
 
-.presentation {
-    padding: 100px 0;
+/* Sections */
+#home, .presentation, .services, .plans, .about-us, .testimonials {
+    width: 100%;
+    padding: 50px 20px;
+    box-sizing: border-box;
+}
+
+#home, .presentation {
     background-image: url('https://github.com/LuceroObispoRios/Grupo1_WS52/blob/main/Proyecto/image/fondo.jpeg?raw=true');
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
     color: #fff;
-    text-align: left;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .presentation-box {
-    background-color: rgba(255, 149, 0, 0.7);
-    padding: 90px;
+    background-color: rgba(200, 149, 0, 0.7);
+    padding: 30px;
     border-radius: 20px;
-    margin-left: 100px;
+    max-width: 600px;
+    text-align: center;
 }
 
-.presentation-box h1 {
-    color: #fff;
-}
-
-.presentation-box h2 {
-    color: #141313;
-}
-
-/* Estilos para la sección de servicios */
 .services {
-    padding: 100px 0;
     background-color: #1f1e1e;
-}
-
-.services h2 {
-
-    color: #ffffff;
 }
 
 .service-box {
     background-color: #ff8800;
-    border: 1px solid #ff8800;
     border-radius: 20px;
-    padding: 40px;
-    margin-top: 30px;
-    color: #000000;
-    transition: transform 0.3s ease-in-out;
+    padding: 20px;
+    margin: 10px;
+    flex: 1;
+    text-align: center;
+    color: #000;
+    transition: transform 0.3s;
     cursor: pointer;
-    text-align:center;
 }
 
 .service-box:hover {
     transform: scale(1.05);
 }
 
-.service-icon {
-    width: 100px;
-    height: 100px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-}
-
 .service-icon img {
-    max-width: 100%;
-    max-height: 100%;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
 }
 
 .read-more {
@@ -135,55 +111,53 @@ ul{
     border-radius: 20px;
     border: none;
     color: white;
+    cursor: pointer;
 }
 
-
-#plans {
+/* Plans */
+.plans {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: rgb(31,29,30,255);
-    border:0;
-    color: #ffffff;
-    padding-bottom: 60px;
-    padding-top: 60px;
-
 }
 
 .plans .card-container {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
     width: 100%;
-    padding-top: 0;
-    padding-bottom: 35px;
 }
 
 .plans .card {
-    width: 300px;
+    flex: 1 1 calc(33% - 40px);
+    background-color: #333;
+    color: #fff;
     border-radius: 15px;
-    border: 0;
     overflow: hidden;
+    max-width: 300px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-
-
 
 .plans .stripe {
     height: 20px;
 }
 
-.plans .standard .stripe {
+.plans .stripe.standard {
     background-color: rgba(255, 149, 0, 0.7);
 }
 
-.plans .pro .stripe {
+.plans .stripe.pro {
     background-color: rgba(255, 149, 0, 0.7);
 }
 
-.plans .premium .stripe {
+.plans .stripe.premium {
     background-color: rgba(255, 149, 0, 0.7);
 }
-
-
 
 .plans .card-content {
     padding: 20px;
@@ -191,23 +165,14 @@ ul{
 }
 
 .plans .custom .card-content {
-    padding: 20px;
     display: flex;
-}
-
-.plans .custom .left-column{
-    text-align: center;
-    width: 75%;
+    justify-content: space-between;
+    padding: 20px;
 }
 
 .arrow {
-    font-size: 4em; /* Ajusta esto al tamaño que prefieras */
+    font-size: 4em;
     padding-top: 55px;
-}
-
-.plans .custom .right-column {
-    text-align: center;
-    width: 100%; /* Ajusta esto al ancho que prefieras para las columnas */
 }
 
 .subscribe {
@@ -215,79 +180,68 @@ ul{
     padding: 10px;
     border: none;
     color: white;
+    cursor: pointer;
 }
 
-
-/* Estilos para la sección "About Us" */
+/* About Us */
 .about-us {
     background-color: rgb(252, 252, 252);
-    padding: 6rem 0; /* Espaciado interior superior e inferior */
-    text-align: center; /* Centra el contenido */
+    text-align: center;
 }
 
 .about-content {
     max-width: 1200px;
     margin: 0 auto;
-
 }
 
 .about-content h2 {
-    color: rgb(214, 160, 73); /* Color del título */
-    font-size: 5rem;
+    color: rgb(214, 160, 73);
+    font-size: 3rem;
     margin-bottom: 2rem;
 }
 
 .about-details {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
-    padding: 2rem;
-
+    justify-content: center;
+    gap: 20px;
 }
 
 .about-image {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     background-image: url('https://github.com/LuceroObispoRios/Grupo1_WS52/blob/main/Proyecto/image/logo1.png?raw=true');
     background-size: cover;
     background-position: center;
-    border-radius: 50%; /* Bordes redondos para que sea cuadrada */
-    margin-right: 2rem;
+    border-radius: 50%;
+    margin: 10px;
 }
 
 .about-text {
-    padding: 2rem;
-    border-radius: 10px; /* Bordes redondos para el cuadro de texto */
-    flex: 1;
     background-color: rgb(31,29,30,255);
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 250px;
 }
 
-.about-text p {
-    color: #ffffff; /* Color del texto dentro del cuadro de texto */
-    font-size: 1.6rem;
-}
-
-/* Estilos para la sección "Testimonios" */
-
+/* Testimonials */
 .testimonials {
-    padding: 100px 0;
     background-color: #fff;
+    text-align: center;
 }
 
 .testimonials h2 {
-    color: #333;
+    color: #948787;
 }
 
 .testimonial-box {
     background-color: #3e3e3e;
-    border: 1px solid #000000c5;
     border-radius: 10px;
     padding: 20px;
-    text-align: center;
-    color: #ffffff;
-    margin-top: 30px;
+    margin: 10px;
+    color: #fff;
 }
 
 .testimonial-img {
@@ -296,8 +250,8 @@ ul{
     border-radius: 50%;
     margin-bottom: 10px;
 }
-/* Estilos para el pie de página */
 
+/* Footer */
 footer {
     background-color: #1f1e1e;
     color: #fff;
@@ -320,9 +274,3 @@ footer .col-md-3 a img {
     margin-right: 10px;
 
 }
-
-
-
-
-
-
