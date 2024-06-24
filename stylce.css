@@ -267,10 +267,46 @@ footer .row {
 
 }
 
-
 footer .col-md-3 a img {
     max-width: 30px;
     max-height: 30px;
     margin-right: 10px;
 
 }
+
+/* Video Section */
+
+.video-section {
+    text-align: center;
+    padding: 20px 0;
+    color: #ffffff;
+}
+
+.video-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.video-item {
+    width: 90%;
+    margin: 0 10px;
+}
+
+
+.video-item iframe {
+    max-width: 560px;
+    max-height: 315px;
+
+
+
+}
+
+
+.video-item p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+
